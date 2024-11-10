@@ -1,0 +1,22 @@
+---
+
+# List of packages
+package_list: []
+
+# Package state
+package_state: present
+
+# Update cache?
+package_update_cache: yes
+
+# Packages commonly installed on managed systems
+packages_homeco:
+  - name: net-tools
+  - name: mlocate
+  - name: mail
+    dnf_name: mailx
+    yum_name: mailx
+    apt_name: mailutils
+  - name: screen
+  - name: rsync
+  - name: tmux

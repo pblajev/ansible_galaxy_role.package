@@ -1,0 +1,9 @@
+---
+- import_tasks: package-dnf.yml
+  when: ansible_pkg_mgr == 'dnf'
+
+- import_tasks: package-yum.yml
+  when: ansible_pkg_mgr == 'yum'
+
+- import_tasks: package-apt.yml
+  when: ansible_pkg_mgr == 'apt'

@@ -1,0 +1,7 @@
+.vagrant
+.venv
+.idea
+build/
+*.retry
+*.log
+.DS_Store

@@ -1,0 +1,9 @@
+---
+- name: Yum role
+  yum:
+    name: "{{ item.yum_name | default(item.name) }}"
+    state: "{{ item.state | default(package_state) }}"
+    update_cache: "{{ package_update_cache }}"
+    disable_gpg_check: "yes"
+  when: (item.yum_ignore|default('no'))|string in 'No,no'
+  with_items: "{{ package_list }}"
